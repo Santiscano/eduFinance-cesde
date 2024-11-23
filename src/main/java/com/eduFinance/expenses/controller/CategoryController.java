@@ -3,15 +3,13 @@ package com.eduFinance.expenses.controller;
 import com.eduFinance.expenses.entity.Category;
 import com.eduFinance.expenses.service.CategoryServiceJPA;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/categories")
+@CrossOrigin(origins = "*")
 public class CategoryController {
 
     @Autowired
@@ -25,5 +23,10 @@ public class CategoryController {
     @GetMapping("/{id}")
     public Category getCategoryById(@PathVariable int id) {
         return categoryService.getCategoryById(id);
+    }
+
+    @PostMapping("")
+    public Category addCategory(@RequestBody Category category) {
+        return categoryService.addCategory(category);
     }
 }
