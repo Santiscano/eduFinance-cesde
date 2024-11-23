@@ -2,6 +2,7 @@ package com.eduFinance.expenses.service;
 
 import com.eduFinance.expenses.entity.Category;
 import com.eduFinance.expenses.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class CategoryServiceJPA implements CategoryService{
 
+    @Autowired
     CategoryRepository categoryRepository;
 
     @Override

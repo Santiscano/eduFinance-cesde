@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 public class UserClient {
     @Id
     private Long id_user_client;
-    private Long expenses_id;
     private String name_user;
     private String email;
     private String password;

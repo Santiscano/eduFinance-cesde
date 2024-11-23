@@ -14,6 +14,5 @@ import lombok.NoArgsConstructor;
 public class Category {
     @Id
     private Long id_category;
-    private Long expenses_id;
     private String name_category;
 }
