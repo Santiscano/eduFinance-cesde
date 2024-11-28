@@ -1,6 +1,8 @@
 package com.eduFinance.expenses.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Expenses {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_expenses;
     private Long user_id;
     private Long category_id;

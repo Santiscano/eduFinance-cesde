@@ -1,22 +1,7 @@
 
 
-CREATE TABLE UserClient (
-    id_user_client INT PRIMARY KEY,
-   
-    name_user VARCHAR(30),
-    email VARCHAR(30),
-    password VARCHAR(30)
-	
-);
-CREATE TABLE Category (
-    id_category INT PRIMARY KEY,
-   
-    name_category VARCHAR(30),
-    
-);
-
 CREATE TABLE Expenses (
-    id_expenses INT PRIMARY KEY,
+    id_expenses INT IDENTITY(1,1) PRIMARY KEY,
     user_id INT,
     category_id INT,
     description VARCHAR(30),
